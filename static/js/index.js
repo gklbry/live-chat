@@ -1,5 +1,5 @@
 const app = () => {
-    const socket = io('http://localhost:3000/');
+    const socket = io('https://live-chat-t97q.onrender.com');
     const msgInput = document.querySelector('.message-input');
     const msgList = document.querySelector('.messages-list');
     const sendBtn = document.querySelector('.send-btn');
@@ -9,7 +9,7 @@ const app = () => {
     const getMessages = async () => {
       try {
         const { data } = await axios.get(
-          'http://localhost:3000/api/chat'
+          'https://live-chat-t97q.onrender.com/api/chat'
         );
   
         renderMessages(data);
